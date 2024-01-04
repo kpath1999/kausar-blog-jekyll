@@ -13,3 +13,5 @@ Outside of this daily tinkering, I enjoy reading, playing the piano, and competi
 You can find my projects on GitHub: [kpath1999](https://github.com/kpath1999)
 
 Feel free to reach out via [email](mailto:kpatherya3@gatech.edu), or on [LinkedIn](https://www.linkedin.com/in/kausar-patherya/).
+
+Visit count: 
