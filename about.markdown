@@ -4,14 +4,6 @@ title: About
 permalink: /about/
 ---
 
-Graduate student at Georgia Tech, specializing in machine learning. And a cloud solutions engineer at EY, a multinational professional services firm.
-
-You'll find me typically working on my own pet projects. I'm deploying my own ML models in the cloud, bringing my unique perspectives to solve the problems facing humanity.
-
-Outside of this daily tinkering, I enjoy reading, playing the piano, and competing in triathlons.
-
-You can find my projects on GitHub: [kpath1999](https://github.com/kpath1999)
-
-Feel free to reach out via [email](mailto:kpatherya3@gatech.edu), or on [LinkedIn](https://www.linkedin.com/in/kausar-patherya/).
+Just about anything I write here will change over time. However, there are a few things that will stand the test of time. I'm a bit of a wanderer, moving from place to place, learning and growing in the process. I was born in Kolkata, India in 1999 and I moved to the United States in 2018. Moving from city to city may seem unsettling to some, but to me it has led me down the path of self-discovery. When you don't make yourself too comfortable/settled, there is a possibility for growth. That's been the mantra for my life - to always seek new challenges everyday. That's how we evolve. The feeling I get everytime I push past my own limits is what makes life worth living. The desire to get better, the abilitity to push past discomfort, to show up every single day -- these are the core tenets I live my life by.
 
 Visit count: 

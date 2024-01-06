@@ -20,15 +20,14 @@
 
 title: Kausar Patherya
 email: kpatherya3@gatech.edu
-github_username:  kpath1999
-linkedin_username: k-path
-description:
+description: >- # this means to ignore newlines until "baseurl:"
   Welcome to my blog! I like writing about technology, fitness, philosophy, history and just about 
   anything I find interesting. I'm fascinated by Artificial Intelligence and where it can 
   lead our civilization. I hope to be part of this revolution, contributing in my own little way.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-
+url: "https://kausarpatherya.com" # the base hostname & protocol for your site, e.g. http://example.com
+linkedin_username: k-path
+github_username:  kpath1999
 
 # Build settings
 theme: minima
