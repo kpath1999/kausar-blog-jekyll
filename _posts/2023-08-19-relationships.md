@@ -25,31 +25,3 @@ The relationships that were once a primary part of my life, i.e, my family - are
 It goes back to my mom calling me selfish in July 2022 when I did not wish to spend too much time around the house, idling around / hanging out. Life is short. We’re never getting this life back. Time is running out. We’re not doing ourselves any favors by living for others, remaining enslaved to their whims and desires. It’s really important to listen to one’s heart and go after the vision you’ve set for yourself. 
 
 There have been multiple occasions in my life where I have felt less than, harboring a victim’s mindset that hasn’t done me any good. I want to do things differently this time. I am my own obstacle and only I can get in my way. I have a unique opportunity today, living in the most prosperous country in the world, having graduated from an elite university, working in a prestigious job, training for triathlons, and about to pursue a graduate degree at Georgia Tech. None of this has come easy. And it’s all actualized for me in large part due to the hard work and focus I’ve put in. I’m not relenting, ever. I owe it to myself to become the best version of myself. This time, there will be nothing that gets in my way. Because, unlike previous occasions, I’ve built the mental fortitude, physical foundation, and acquired enough financial resources to drive towards the goals I’ve always wanted to achieve. Nobody understands me like I do, and I know the deep burning desires I have for my life. If people misunderstand me, disapprove of my path, get jealous, say hurtful things… Quite frankly, that’s their problem. Because unlike previous occasions, there’s nothing they can do that can stop me from getting after my goals.
-
-A sample blog page that demonstrates the accessing of github meta data.
-
-## What does Github-MetaData do?
-* Propagates the site.github namespace with repository metadata
-* Setting site variables :
-  * site.title
-  * site.description
-  * site.url
-  * site.baseurl
-* Accessing the metadata - duh.
-* Generating edittable links.
-
-## Additional Reading
-* If you're recieving incorrect/missing data, you may need to perform a Github API<a href="https://github.com/jekyll/github-metadata/blob/master/docs/authentication.md"> authentication</a>.
-* Go through this <a href="https://jekyll.github.io/github-metadata/">README</a> for more details on the topic.
-* <a href= "https://github.com/jekyll/github-metadata/blob/master/docs/site.github.md">This page</a> highlights all the feilds you can access with github-metadata.
-<br />
-
-## Example MetaData
-* Host Name : {{ site.github.hostname }}
-* URL : {{ site.github.url }}
-* BaseURL : {{ site.github.baseurl }}
-* Archived : {{ site.github.archived}}
-* Contributors :
-{% for contributor in site.github.contributors %}
-  * {{ contributor.login }}
-{% endfor %}
