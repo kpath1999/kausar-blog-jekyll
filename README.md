@@ -10,7 +10,7 @@ Jekyll made things easier. I came across [this](https://karpathy.github.io/2014/
 
 ## Retospective
 
-I found the whole process quite intuitive. Once you've set up Jekyll on your local computer, you best friends will be the 'config.yml', and '_posts' folder. Simply fill in the key attributes within the configuration file, and c/p your articles within the '_posts' folder. And voilà! Your website is ready.
+I found the whole process quite intuitive. Once you've set up Jekyll on your local computer, you best friends will be the `config.yml`, and `_posts` folder. Simply fill in the key attributes within the configuration file, and c/p your articles within the `_posts` folder. And voilà! Your website is ready.
 
 Here's what the frontend looks like:
 
@@ -22,11 +22,11 @@ I followed the minima template. The UI doesn't make you go "wow!!" and that's no
 
 ## Tidbits
 
-I had taken part in the AWS resume challenge in January 2023, and built a visit counter on my website as part of the project (more can be found [here](https://github.com/kpath1999/resume-frontend)). I wasn't able to find a way to directly include my count API within the 'yml' file. I ended up digging through the '_site' folder (which you're not supposed to touch, since it resets everytime you run 'jekyll clean'). I manually added 'Visit count: <span class="visits"></span>' to the 'index.html' file to get it to show up on the bottom of the main page.
+I had taken part in the AWS resume challenge in January 2023, and built a visit counter on my website as part of the project (more can be found [here](https://github.com/kpath1999/resume-frontend)). I wasn't able to find a way to directly include my count API within the 'yml' file. I ended up digging through the `_posts` folder (which you're not supposed to touch, since it resets everytime you run 'jekyll clean'). I manually added `Visit count: <span class="visits"></span>` to the `index.html` file to get it to show up on the bottom of the main page.
 
 Another piece I wish I knew was how to add the favicon icon (in my case, a seedling) to my blog tab. I ended up having to go through several 'html' pages and manually included the icon.
 
-Finding ways to automate key steps of the development process will save me a lot of effort in the future. I will find ways of making these changes directly through the 'config.yml' file. Better to work smarter in this case since I foresee adding more of writing to the blog in the future.
+Finding ways to automate key steps of the development process will save me a lot of effort in the future. I will find ways of making these changes directly through the `config.yml` file. Better to work smarter in this case since I foresee adding more of writing to the blog in the future.
 
 ## Summary
 
