@@ -14,7 +14,7 @@ I found the whole process quite intuitive. Once you've set up Jekyll on your loc
 
 Here's what the frontend looks like:
 
-![Blog landing page](../blog-landing-page.PNG)
+![Blog landing page](blog-landing-page.PNG)
 
 Using Jekyll reminded me how Terraform works. With a few commands made in your local shell, you can spin up a new version of your website, test its functionality, and eventually go live. It's the perfect training ground for aspiring web designers.
 
