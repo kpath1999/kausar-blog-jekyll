@@ -3,18 +3,16 @@ layout: post
 title:  "Morning Pages"
 date:   2024-02-04 15:15:16 17:00:00 +0100
 description: Writing about my motivation with morning pages and how it worked out
-image: /pics/morning-pages.jpg
 excerpt: A ritual that has aided my mental health in a profound way
-permalink: /2024/02/04/morning-pages/
 ---
-
-![Pages](/pics/morning-pages.jpg)
 
 ## Motivation
 
 Work in progress. I will write about why I started morning pages in the first place and what I hoped to gain from it.
 
 ## Daily practice
+
+![Pages](/pics/morning-pages.jpg)
 
 How it actually shaped up, how it's benefitted me.
 
