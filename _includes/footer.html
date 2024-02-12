@@ -1,0 +1,23 @@
+<footer class="site-footer h-card">
+    <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+        <div class="footer-col footer-col-2">
+          {%- include social.html -%}
+        </div>
+
+        <div class="footer-col footer-col-2">
+          <img src="/pics/me.jpg" width="248" height="248" style="height: auto" alt="Black&amp;white photo of Piotr Horzycki">
+        </div>
+  
+        <div class="footer-col footer-col-3">
+          <p>{{- site.description | escape -}}</p>
+        </div>
+      </div>
+      <script src="dynamic.js"></script>
+      <p class="built">Built with <a href="https://jekyllrb.com/">Jekyll</a>, inspired by <a href="https://github.com/peterdevpl/peterdevpl.github.io/">Piotr Horzycki</a>. Visit count: <span class="visits"></span></p>
+    </div>
+  
+  </footer>

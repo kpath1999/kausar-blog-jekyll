@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you:
+# If you need help with YAML syntax, here are some quick references for you: 
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -18,22 +18,49 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Kausar Patherya
-email: kpatherya3@gatech.edu
+name: Kausar Patherya
+title: Kausar's Blog
+email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my blog! I like writing about technology, fitness, philosophy, history and just about 
-  anything I find interesting. I'm fascinated by Artificial Intelligence and where it can 
-  lead our civilization. I hope to be part of this revolution, contributing in my own little way.
+  Welcome to my blog! I like writing about technology, fitness, philosophy, history and just about anything I find interesting. I'm fascinated by Artificial Intelligence and where it can lead our civilization. I hope to be part of this revolution, contributing in my own little way.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kausarpatherya.com" # the base hostname & protocol for your site, e.g. http://example.com
-linkedin_username: k-path
 github_username:  kpath1999
+linkedin_username: k-path
+show_excerpts: true
+
+social:
+  name: Kausar Patherya
+  links:
+    - https://www.linkedin.com/in/k-path/
+    - https://github.com/kpath1999
+
+feed:
+  path: /feed/index.xml
+
+twitter: # For jekyll-seo-tag
+  username: KPatherya
+  card: summary
 
 # Build settings
 theme: minima
 plugins:
+  - jekyll-archives
   - jekyll-feed
+  - jekyll-redirect-from
   - jekyll-seo-tag
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+jekyll-archives:
+  enabled:
+    - tags
+  layouts:
+    tag: tag
+  permalinks:
+    tag: '/tag/:name/'
 
 # Exclude from processing.
 # The following items will not be processed, by default.

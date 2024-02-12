@@ -1,0 +1,68 @@
+.site-header, .site-footer {
+   background: $very-light-grey;
+}
+
+.site-header {
+   padding-top: 5px;
+   padding-bottom: 10px;
+}
+
+.site-title {
+   line-height: 40px;
+}
+
+.site-subtitle {
+   clear: both;
+   color: $grey-color;
+}
+
+.site-footer {
+   .built {
+      color: $grey-color-dark;
+      font-size: 90%;
+      margin-bottom: 0;
+   }
+}
+
+.call-to-action {
+   background: black;
+   bottom: 0;
+   color: white;
+   left: 0;
+   position: fixed;
+   right: 0;
+   text-align: center;
+
+   svg {
+      fill: white;
+      vertical-align: baseline;
+   }
+
+   a {
+      color: white;
+      display: block;
+      padding: 0.5ex 0;
+
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}
+
+aside {
+   float: left;
+   margin-right: 1em;
+}
+
+aside.book-ad {
+   background: $very-light-grey;
+   border: solid $grey-color-light 1px;
+   font-size: 110%;
+   padding: 10px 5px;
+   text-align: center;
+   width: 185px;
+
+   img {
+      margin-bottom: 1ex;
+   }
+}
