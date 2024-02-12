@@ -3,14 +3,11 @@ layout: post
 title:  "Habit Tracking"
 date:   2024-02-11 15:15:16 17:00:00 +0100
 description: An essay about my attempts to build long-lasting habits
-image: /pics/wanderer_painting.webp
 excerpt: Building robust systems for physical, mental & spiritual flourishing
 permalink: /2024/02/11/habit-tracking/
-tags:
-- habits
-- self-help
-- discipline
 ---
+
+![Wanderer](/pics/wanderer_painting.webp)
 
 We all want to look good, be healthy, lead meaningful lives, be... happy, or some variant of that word. Why is it that only a handful of us ever reach that destination? We live in a world that’s never been as technologically advanced and globally connected. Why is that so many of us feel more detached and lost in our lives? In this blog post, I delve into these questions, trying to unravel what might be the real cause of our suffering.
 

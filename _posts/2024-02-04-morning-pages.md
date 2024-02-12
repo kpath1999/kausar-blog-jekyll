@@ -6,11 +6,9 @@ description: Writing about my motivation with morning pages and how it worked ou
 image: /pics/morning-pages.jpg
 excerpt: A ritual that has aided my mental health in a profound way
 permalink: /2024/02/04/morning-pages/
-tags:
-- journaling
-- routine
-- mental-health
 ---
+
+![Pages](/pics/morning-pages.jpg)
 
 ## Motivation
 
