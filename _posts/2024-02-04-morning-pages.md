@@ -22,7 +22,7 @@ I treat this blog as a kind of journal as well, except it’s more structured an
 
 ## What does it looks like?
 
-I transcribed about 6 months of morning pages material and included it in this section – primarily to demonstrate how I go about the whole process. To make your life a bit easier, I divided chunks of my writings into broad themes, adding relevant context under each. Feel free to skip to the final section once you get an essence of my journaling process looks like. I end this blog with my closing thoughts on what journaling has enabled for me so far, and how I plan on leveraging it in the future.
+I transcribed about 6 months of morning pages material and included it in this section – primarily to demonstrate how I go about the whole process. To make your life a bit easier, I divided chunks of my writings into broad themes, adding relevant context under each. Feel free to skip to the final section once you get an essence of what my journaling process looks like. I end this blog with my closing thoughts on what journaling has enabled for me so far, and how I plan on leveraging it in the future.
 
 ### Talking about graduate school, the OMSCS program, building mastery
 
