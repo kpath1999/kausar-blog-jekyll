@@ -42,15 +42,15 @@ In July 2022, I had no idea what cloud computing really entailed. As of writing 
 
 A lot of my motivation around getting proficient with cloud technologies was more work-related. The consulting firm I work at emphasizes that its employees use their free time studying for certifications and taking these IT exams. When I wasn’t staffed or had some spare time on my hands, that’s exactly what I did. Memorizing theoretical concepts in a rote fashion only got me so far though. What made the difference in my learning was using the cloud platform and applying what I learned. I would take a lot of practice exams, make mistakes, and learn from them. I would engage in hands-on labs, where I interacted with the cloud console in an interactive fashion, learning at a far higher rate. A bit of a flex, but I’m including the certifications I earned below:
 
-\* AWS Certified Solutions Architect – Associate ([badge]())
-\* Machine Learning Specialization ([badge]())
-\* Mathematics for Machine Learning and Data Science ([badge]())
-\* FinOps Certified Practitioner ([badge]())
-\* AWS Certified Cloud Practitioner ([badge]())
-\* Google Cloud Digital Leader ([badge]())
-\* Microsoft Azure Fundamentals ([badge]())
-\* Microsoft 365 Fundamentals ([badge]())
-\* _...and more!_
+* AWS Certified Solutions Architect – Associate ([badge](https://www.credly.com/badges/70f83be8-56b1-47ad-a8b5-57cdb4e0b6af/public_url?trk=public_profile_see-credential))
+* Machine Learning Specialization ([badge](https://coursera.org/share/a02fe4c881bc12ad15193bc1a578c827?trk=public_profile_see-credential))
+* Mathematics for Machine Learning and Data Science ([badge](https://coursera.org/share/876735bc68388382f17d78f9a104011b?trk=public_profile_see-credential))
+* FinOps Certified Practitioner ([badge](https://coursera.org/share/876735bc68388382f17d78f9a104011b?trk=public_profile_see-credential))
+* AWS Certified Cloud Practitioner ([badge](https://www.credly.com/badges/451decf3-cb74-422a-912f-bd819921b668/public_url?trk=public_profile_see-credential))
+* Google Cloud Digital Leader ([badge](https://www.credential.net/316e2186-53f7-4281-8733-920048ab0069?key=65ec3412d2fe42e02ed3053725c7a51540e94b457c959169f7600b8ac461b238&trk=public_profile_see-credential))
+* Microsoft Azure Fundamentals ([badge](https://www.credly.com/badges/233f5418-6fc1-46eb-b07a-8103d35582ba/public_url?trk=public_profile_see-credential))
+* Microsoft 365 Fundamentals ([badge](https://www.credly.com/badges/233f5418-6fc1-46eb-b07a-8103d35582ba/public_url?trk=public_profile_see-credential))
+* _...and more!_
 
 I learned a lot in the process, but I felt something missing. There was a practical dimension that I hadn’t experienced. Just having the credential didn’t prove that you could do the job. I internalized this concern and worked on my first cloud project – the AWS Resume Challenge by Forrest Brazeal. It gave me a solid understanding of how to go about setting up a website frontend (link) and backend (link), and how to connect the 2 with an API. Incidentally, the visit count at the bottom of the home page was the key outcome of this project. I experienced an immense sense of pride upon completing that project. It made me realize that I love programming and building things. Honing this skill became my utmost priority.
 
@@ -60,11 +60,7 @@ The point of this whole story is for you to realize that if I can make it this f
 
 ### Fitness
 
-This has been the game changer in my life. If you looked at my pictures from 3 years ago, you would barely recognize me. In fact, let me include a before-after picture below:
-
-![A before-after picture](/pics/before-after.jpg)
-
-I simply did not like the way I looked for the longest time. There was a sense of shame I felt that was eating into me. I had to take matters into my own hands, or I would have to silently suffer like this for all my life. That’s when I signed up for a gym membership at Anytime Fitness, Champaign IL on May 7th, 2021. I still remember the date because, from that day forward, my life would never be the same. Since writing this, I have gained considerable muscle mass, lifted more weight than I ever thought imaginable, learned to swim in the open water, completed 4 triathlons, become an active member of the CrossFit community, and I am only getting started.
+This has been the game changer in my life. If you looked at my pictures from 3 years ago, you would barely recognize me. I simply did not like the way I looked for the longest time. There was a sense of shame I felt that was eating into me. I had to take matters into my own hands, or I would have to silently suffer like this for all my life. That’s when I signed up for a gym membership at Anytime Fitness, Champaign IL on May 7th, 2021. I still remember the date because, from that day forward, my life would never be the same. Since writing this, I have gained considerable muscle mass, lifted more weight than I ever thought imaginable, learned to swim in the open water, completed 4 triathlons, become an active member of the CrossFit community, and I am only getting started.
 
 The journey of a thousand miles begins with a single step. That first step involved overcoming inertia and showing up for my first personal training session, uncertain about what to expect. I remember paying around $500 for an 8-class package – a lot of money for a college student to spend. My friends (at the time) laughed at my decision, but I figured I would stick to my guns. Those $500 turned out to me the wisest investment I’ve ever made in myself. My coach taught me everything I needed to know about weight training and how to best use my time in the gym. He gave me nutrition advice, especially around protein intake. Within 4 months, I made incredible progress. My body had grown much stronger, and I discovered a newfound confidence I never felt before. I was hooked and each day offered an opportunity for me to get better.
 
@@ -74,13 +70,13 @@ Besides the sessions with my trainer, I mostly preferred to workout alone. And I
 
 This is the hobby I am most proud of. I played the piano for a brief period in high school but gave up after a few months. I regretted that decision, but realized it wasn’t too late. My piano teacher, Ela Kriss, in Lakeview, Chicago has been instrumental in my success. I show up for her lessons weekly and practice daily on my keyboard. Deliberate practice over sustained periods of time paid off in a major way. I can now play for small audiences and occasionally get an applause! It’s crazy to see that kind of progress in my 2.5 years, but it is possible. Including a few of my piano performances below in case you don’t believe me:
 
-\* Plaisir d'amour by Jean-Paul-Égide Martini ([video]())
-\* The Entertainer by Scott Joplin ([video]())
-\* Rigoletto: La donna è mobile by Luciano Pavarotti ([video]())
-\* Light & Blue by William A. Palmer ([video]())
-\* On Top of Old Smokey by William A. Palmer ([video]())
-\* O Sole Mio by Luciano Pavarotti ([video]())
-\* _...and hopefully many more!_
+* Plaisir d'amour by Jean-Paul-Égide Martini ([video](https://www.youtube.com/watch?v=EPjfdtw0_Xw))
+* The Entertainer by Scott Joplin ([video](https://www.youtube.com/watch?v=9vNlzncJvBI))
+* Rigoletto: La donna è mobile by Luciano Pavarotti ([video](https://www.youtube.com/watch?v=s1YlNkvGlu8&pp=ygUea2F1c2FyIGVsYWtyaXNzbXVzaWMgcmlnb2xldHRv))
+* Light & Blue by William A. Palmer ([video](https://www.youtube.com/watch?v=Ug30x-NHlPg))
+* On Top of Old Smokey by William A. Palmer ([video](https://www.youtube.com/watch?v=0dO64WZCKQU))
+* O Sole Mio by Luciano Pavarotti ([video](https://www.youtube.com/watch?v=mwITVqPAvQY))
+* _...and hopefully many more!_
 
 None of this has come easy, but I find playing music incredibly therapeutic. There are things I can’t communicate through words that I can only express through music. I really wonder why it is that certain classical pieces move us do deeply. The relationship between music and the mind is something I would love to explore.
 

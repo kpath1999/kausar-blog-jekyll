@@ -6,27 +6,27 @@ description: Writing about my motivation with morning pages and how it worked ou
 excerpt: A ritual that has aided my mental health in a profound way
 ---
 
-## Motivation
-
-Work in progress. I will write about why I started morning pages in the first place and what I hoped to gain from it.
+Think ‘spiritual windshield wipers.’ That’s what morning pages are to me. And it’s not something I always do in the morning. The whole of this exercise is to dump recurring patterns of thought onto a piece of paper and trap it there. That way, you’ll be able to look at your own thinking with a bit more detachment – especially when you are emotional.
 
 ## Daily practice
 
 ![Pages](/pics/morning-pages.jpg)
 
-How it actually shaped up, how it's benefitted me.
+The requirement: 2 pages of unadulterated stream-of-consciousness writing. This is not for anyone’s approval or judgement. As I’ve done this over the past year, I’ve been able to look at my own past writing and see for myself how I’ve been able to cope with the various trials and tribulations that came up in my life. What did I do well, what could I have handled better? Gaining that vantage point is essential to avoid making the same mistakes and improving as a human.
 
-## Realizations
+Paper is more patient than people. It’s true. I’ve been able to constructively deal with a great deal of emotional turbulence in my life through the simple act of journaling. Remaining calm, seeing things rationally, being more intentional with my words and actions – this is what journaling has inculcated within me.
 
-Summarize the high-level takeaways from your writing and the direction it's given you in life.
+It also keeps me accountable. I use it as a planning exercise, saying that I’ll accomplish “x” by next week and logging my daily activities, ensuring that I’m inching towards my goal. On our road to mastery, we’re on our own. Nobody’s going to get us to where we want to go. We must be willing to show up for ourselves and do the work. Journaling helps with that. It’s like looking in the mirror and presenting evidence that you are the kind of person you say you are. And it doesn’t work if you’re not willing to show up every day.
 
-## Serving it raw
+I treat this blog as a kind of journal as well, except it’s more structured and semi-coherent. It’s unlikely that a lot of people will ever read this, but that’s okay. It doesn't matter. The point is for me to (a) be more disciplined with the work I put in, and (b) become a better writer in the process. Personal development is the only thing I’m here for. Everything else is a bonus.
 
-Providing an introduction to this section. Broke them down into themes and contexts so the reader can skim around as they see fit.
+## What does it looks like?
+
+I transcribed about 6 months of morning pages material and included it in this section – primarily to demonstrate how I go about the whole process. To make your life a bit easier, I divided chunks of my writings into broad themes, adding relevant context under each. Feel free to skip to the final section once you get an essence of my journaling process looks like. I end this blog with my closing thoughts on what journaling has enabled for me so far, and how I plan on leveraging it in the future.
 
 ### Talking about graduate school, the OMSCS program, building mastery
 
-> *Context*: Talk about what was on your mind prior to writing this portion. Assume the reader doesn't know you.
+> *Context*: At this point, I was dealing with a dilemma – should I stick to my high-paying job that wasn’t as intellectually stimulating as I hoped, or head to graduate school? I eventually decided on pursuing the latter, with the hopes of building a degree of mastery within my field of study.
 
 I keep hearing this voice in my head that says I should go back to school, pursue a graduate degree. I wonder where this feeling comes from. I think I’ve always wanted to learn more, and be more effective with the work I put out into the world. To put these thoughts into action, I’m starting off with the Georgia Tech degree that would MAX take me 3 years (till 2026). My OPT may expire by then, and I may be in a different geography, getting accustomed to some big change in my life. I may even harness the GTech momentum and pursue a more specialized Master’s or Engineering + MBA degree (although I’m weary of more school). No matter what, I need it to be HARD. No cutting corners. These experiences must be able to provide me with a tangible skill set. I want to build the mental rigor to be able to look at this wonderful world of ours in novel, useful ways.
 
@@ -46,7 +46,7 @@ This takes me back to relationship-building. “How do I feel around this person
 
 ### On meditation and the realizations I've begun to have
 
-> *Context*: <>
+> *Context*: Meditation has yielded many benefits for me. It’s made me a calmer person and I’ve been able to gain more clarity in my own life. I practice daily for 20-30 minutes, first using the Waking Up app, and now without any guidance. I also attended a 10-day Vipassana retreat inspired by the recordings of the late S.N. Goenka.
 
 Ever since I started meditating last year, I began to realize how much calmer and intentional I felt about everything I did thereafter. In an environment where I am mostly by myself, it is important to stay level-headed and avoid spiraling out of control. There have been days where meditating has been difficult. My mind would be distracted by a constant stream of thought and it can be difficult to avoid engaging them. I think it’s a matter of practice. Upon meditating consistently, I have been able to deal with these sensations in a more equanimous manner. I’m less distracted and more at peace. I look forward to my daily meditation sessions. 20 minutes everyday is a worthwhile investment. I hope to go on a meditation retreat this year. I would like to experience what it would be like to remain in a meditative state for hours at a stretch. It’s fascinating to learn more about the nature of mind.
 
@@ -78,7 +78,7 @@ Meditating over one’s death makes you realize that you really have nothing to 
 
 ### Developing a stoic mindset
 
-> *Context*: <>
+> *Context*: I like philosophy, especially stoicism. I find myself watching a lot of Ryan Holiday videos and reading a lot of material on the subject. This section is primarily me applying this mindset to my life and seeing what sticks.
 
 Writing this before going to bed today. It was the first day at work right after the week-long summer break. I spent half of the time networking with colleagues within my practice. I’ve been looking forward to getting involved with cloud engagements occurring at my company. Getting my name out there, helping them out, studying for certifications – these are productive ways to spend my time. No matter what happens in the future, at least I’ll be able to look back at this time and know deep down that I did what I could.
 
@@ -96,7 +96,7 @@ I also want to take a moment to address the injuries/pains that keep creeping up
 
 ### Philosophical rants
 
-> *Context*: <>
+> *Context*: This is me talking about gratitude and acting like a wise-ass philosopher. For what it’s worth, I find it helpful to have these conversations with myself. I hope you do as well.
 
 I was listening to a talk on stoicism earlier in the morning, and one of the topics delved into our idea of happiness and how best we can go about achieving it. A lot of this can be explained by a gap we all perceive, between what we want and what we have. By bridging this gap, we tell ourselves we’ll finally be happy. We do this unknowingly, only to find out we’ve created another gap for ourselves after fulfilling our previous desires. This pattern can be likened to a hedonic treadmill, where we keep trying to fill a void with things, only to find ourselves craving for more. It’s also illuminating to think about our present selves. There was a time in the past where we wanted all the things we currently have, but we’ve conveniently forgotten about those days. The talk centered around the theme of gratitude, and how we must learn to want the things we currently have. It is the only way to escape the web of desires we trap ourselves in. I try to seek a sense of contentment in the daily activities I engage in. Whether that’s working out, reading, or learning a new skill – I’m trying to celebrate the present moment and remove myself from expecting any future reward.
 
@@ -124,7 +124,7 @@ It’s funny how envy works. People get jealous, not realizing they wouldn’t w
 
 ### On following a north star
 
-> *Context*: <>
+> *Context*: What’s the goal? Where am I headed? What’s my vision?
 
 Aside from the goal of passing, I think the Solutions Architect exam is quite interesting. It passes down some practical knowledge about how AWS operates, and how one can go about designing effective workloads in the cloud. It will reflect well on my knowledge and abilities when I pass the exam. It will help me differentiate myself in the workplace. I see this exam as a starting point.
 
@@ -147,7 +147,7 @@ As Arnold says, developing a clear vision is such a crucial part of the journey.
 
 ### Having a practitioner's mindset
 
-> *Context*: <>
+> *Context*: On the importance of doing versus talking. It’s a recurring trend in a lot of books I read. Writing about it helped me understand it better.
 
 Trial and error - the value of tinkering to get one’s desired results. I came across this idea from reading Taleb’s “Antifragile”. The book talks about the value of being a practitioner, an individual who has a net positive impact on the world. He contrasts this ideal with a theoretician, someone who is keen on giving advice without any skin in the game. I found this idea quite compelling. It’s the direction I’d like to take my life in. Instead of getting stuck giving empty advice or turning into a boring academic, I would find much more meaning building tools that are of value to the people around me. Programming is a skill I love improving upon. I enjoy the process of iterating on my work until I get it to a desired place.
 
@@ -159,7 +159,7 @@ Everyday was an opportunity for them to refine their own knowledge structures an
 
 ### Racing in triathlons
 
-> *Context*: <>
+> *Context*: I took up a rather unusual hobby of racing in triathlons. I’ve always found endurance racing fascinating, especially the physical and mental sides of it.
 
 My first triathlon turned out to be kind of a disaster. June 11th, 2023 - That’s the day I competed at the Fox Lake Sprint Triathlon. These past 3 months, I’ve been training at the Chicago Athletic Clubs to get in shape for a triathlon. I’ve been waking up at 4:45 AM from Tuesday – Friday working on running, swimming, cycling and core workouts. I put in a lot of work and looked forward to seeing how I would fare at the race.
 
@@ -179,7 +179,7 @@ In terms of things I’d like to work on for next time, I want to get stronger o
 
 ### The desire to be better
 
-> *Context*: <>
+> *Context*: It’s hard to show up every day. I find myself giving a pep talk to myself time and time again. Enjoy.
 
 I had an interesting conversation after swim practice. It was regarding the process of getting better at a skill. When it comes to acquiring any skill set, there is a learning curve that can feel quite uncomfortable to cope with at times. It’s in these moments where grit and patience come in handy. It doesn’t always come down to the number of hours you’ve spent on a given activity, but if you’ve engaged in deliberate practice. Oftentimes, we engage in an activity with great enthusiasm only to find out we weren’t doing it quite right. The technique may be slightly off and we end up making the same mistakes over time, solidifying the neural structures behind that habit. These habits keep getting harder to change over time. It is for this reason that it always helps to have a coach guide you through the initial phase of learning. I have seen this quite often in my life so far.
 
@@ -195,7 +195,7 @@ Learning how to learn, regardless of the activity. I’m beginning to enjoy the 
 
 ### Healthy relationships
 
-> *Context*: <>
+> *Context*: On how we change as people and how are relationships transform as well. Change is the only constant. Nothing lasts forever.
 
 It’s interesting to see which relationships are healthy and which are not. I was recently having a conversation with my father regarding this. In many interactions, he feels a bit used - as if the other person needed to get something off their chest and they were using the other person to aim their rant at. On the other hand, there are those interactions that leave both sides feeling energized. It’s a shared experience where both parties seem to benefit.
 
@@ -217,7 +217,7 @@ There have been multiple occasions in my life where I have felt less than, harbo
 
 ### Solitude ≠ Loneliness
 
-> *Context*: <>
+> *Context*: I spend a lot of time in my own company. It used to bother me before, but now I thrive on it. It gives me quality focus time that I must utilize to advance my vocation.
 
 Is it possible to be in solitude and not feel any sense of loneliness? This is a thought I’ve been grappling with for a while, and I’m really interested in exploring it further. A lot of the times I’ve seen people spending time with each other, even though they are not very fond of them. I think this is likely because they can’t bear to be by themselves. Shouldn’t we work on being better friends to ourselves? If we can’t bear alone time, there must be some internal dissonance we’re fleeing from. We’re distracting ourselves with external stimuli - be it mindless scrolling, TV, drugs, or alcohol.
 
@@ -231,7 +231,7 @@ Over this next week, I will largely be by myself. I plan to use this time mindfu
 
 ### Lifelong learning
 
-> *Context*: 
+> *Context*: Learning is a habit for me. If I’m not doing this every day, then I’m just another wannabe.
 
 A thought I’ve been sitting with is the importance of constant learning in our careers. The practice was easier in school with all the externalities driving us towards meeting our deadlines. It’s a bit different in the workplace. Unless you make an intentional effort to keep learning and upskilling, there is inevitably going to be a time when you feel jaded, left behind, and hopeless. You begin to doubt yourself and the innate abilities that helped you get the job in the first place. That is why I have begun to take more initiative with pursuing certifications and updating my skills outside of the projects I am currently working on at EY. An area that has piqued my curiosity is the topic of cloud computing. I am fascinated by how simple systems are able to interlink to create these complex platforms that businesses are able to run their operations on. Over this past decade, there has been a seismic shift from the traditional data center model to the cloud. I have enjoyed learning about the fundamentals. Since November of last year, I have passed the beginner level exams prepared by AWS, Azure and Google Cloud. A month back, I also passed the FinOps certified practitioner examination. With this shift to the cloud, companies have to rethink their finances and how they should appropriately budget their IT spend. Cloud follows a variable expense model, and, without the appropriate guardrails in place, there is a high likelihood of significant cost overruns. This disincentivizes organizations from transforming and can stifle the pace of innovation.
 
@@ -251,7 +251,7 @@ The universe has conspired to bring me to America, discover fitness, land a well
 
 ### The importance of showing up
 
-> *Context*: <>
+> *Context*: Kind of repeating myself here but see this as another hype message.
 
 An aspect of my life that I’ve made a concerted effort to change in my ability to stay disciplined towards executing the tasks I’ve set for myself. In an effort to do so - in January of this year, I began logging my daily habits in an app called ‘Habit’. I’ve been focusing on working out, reading, learning (tech), meditating, playing the piano, and abstaining from watching TV - a massive time drain.
 What I have started to notice is that (a) I have the ability to stay disciplined and hit my targets. On average, I have been completing ~84% of my habits in any given month. I have objective data to prove I am doing the things that lead me towards the life I have envisioned for myself. (b) It has demonstrated to me the power of showing up daily. After working out consistently since May 2021, my body absolutely transformed. Even personality-wise, I am not the person I was before, and this has even been pointed out by my peers. Ever since I began training for triathlons in March 2023, I have truly impressed myself by my ability to wake up at 4:45 AM from Tuesday-Friday, consistently showing up for training. I have realized the importance of repetition and consistency with playing the piano and meditating. The former has led me to improve my skills since I began in July 2022. Meditation has been an absolute game changer for me as well. I would highly recommend Sam Harris’ ‘Waking Up’ app. His daily 20 minute meditation has made me less distracted by the spiraling effects of my own thought patterns and remain more firmly grounded in the present moment. (c) Having more discipline has removed the uncertainty and a majority of the day-to-day anxiety in my life. I wake up each day with a clear mission in my mind, and I know who I am trying to become in the process. I have a clear vision for becoming the individual I was always meant to be.
@@ -276,7 +276,7 @@ Now that triathlon season is over, I’d like to keep up with my workouts. It fe
 
 ### On journaling itself
 
-> *Context*: <>
+> *Context*: This helps me to stay motivated as I try to write more consistently. Also gives me ideas on the kinds of things I could write about.
 
 I started a practice in late July 2023 of daily morning pages. Each day, I aim to write about 2 pages of whatever comes to my mind. In the process, I am learning to articulate my thoughts clearly and have the logic hold up when re-read. I got this idea from Tim Ferriss on his YouTube channel, where he spoke about the importance of writing and its potential to impact just about every aspect of one’s life. I have always wanted to improve my ability to write, cogently express my thoughts about a particular topic, and share it with my readers.
 
@@ -288,6 +288,6 @@ I recently had this desire to share my work through a blog. I’ve mostly set up
 
 I’m creating this blog for myself. I won’t mind if nobody ever looks at it. That’s fine. What matters is the soul with which I put my work out. How the world perceives it is the world’s problem.
 
-## Closing Thoughts
+## If you’ve made it this far...
 
-Congratulate the reader on making it this far. End however you like.
+Congratulations! You made it to the end of this blog post. If there’s one thing I can pass to you, it is this: writer’s block is a myth. It’s nothing but procrastination. You may have unrealistic expectations of the quality of your writing. It denies you the freedom of sucking at something. You’ve seen my writing – I’m no genius. It’s average quality at best, but I’ve gotten much better. And that’s the point. If you put in the reps, you will see benefits. And now I shall abruptly end this monologue. Goodbye!
