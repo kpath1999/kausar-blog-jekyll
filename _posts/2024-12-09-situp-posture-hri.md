@@ -53,19 +53,31 @@ With the active group (n=5), the mean was slightly higher, and the variance band
 
 _tl;dr_: No statistically significant conclusions. Here's a rhyme:
 
-__Beeps and buzzes, a posture quest,
-Stats said "Meh" to our behest.
-P-values danced, but none impressed,
-Our backs remained a slouchy mess.
-Sound's 0.4, vibe's 0.1,
-No winner in this spinal fun.
-Post-zaps? 0.06 and 0.8,
-Still no straight spine to celebrate.
-In science's quest for perfect stance,
-These numbers led us on a dance.
-The moral? Sometimes, with a shrug,
-We learn our hypothesis needs a hug.__
+_Beeps and buzzes, a posture quest,_
 
+_Stats said "Meh" to our behest._
+
+_P-values danced, but none impressed,_
+
+_Our backs remained a slouchy mess._
+
+_Sound's 0.4, vibe's 0.1,_
+
+_No winner in this spinal fun._
+
+_Post-zaps? 0.06 and 0.8,_
+
+_Still no straight spine to celebrate._
+
+_In science's quest for perfect stance,_
+
+_These numbers led us on a dance._
+
+_The moral? Sometimes, with a shrug,_
+
+_We learn our hypothesis needs a hug._
+
+<br>
 While p-values differed slightly, no statistically significant conclusions could be made for any of the hypotheses. The study highlights the complexity of posture intervention and the need for further research in this area.
 
 **Limitations**. A major challenge was defining “good posture,” which varies among individuals. It is hard to mathematically codify and requires careful calibration based on the person being studied. A few study design constraints crept up too. Lack of within-comparison testing limited the direct comparison of participant responses. Participants may “try too hard” due to the awareness of being studied (Hawthorne effect). Script interruptions occurred occasionally due to a power supply issue, which were mitigated by resuming the study as soon as a team member found out. The vibration feedback method (using a phone instead of integrating it into a chair) was not ideal. The sample size was too small, especially the single-person control group. And lastly, the short-term nature of this study was a key drawback. Behavioral shifts only become more apparent if the system’s impact is assessed over a longer horizon, say, a month.
