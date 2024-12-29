@@ -1,83 +1,18 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-name: idk
 title: Kausar Patherya
-email: kpatherya3@gatech.edu
-description: >- # this means to ignore newlines until "baseurl:"
-  Thanks for reading!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://kausarpatherya.com" # the base hostname & protocol for your site, e.g. http://example.com
-linkedin_username: k-path
-github_username:  kpath1999
-show_excerpts: true
-
-social:
-  name: Kausar Patherya
-  links:
-    - https://www.linkedin.com/in/k-path/
-    - https://github.com/kpath1999
-
-feed:
-  path: /feed/index.xml
-
-twitter: # For jekyll-seo-tag
-  username: KPatherya
-  card: summary
+email: 
+description: "I like to write, design, code, and share some of the cool projects I'm working on. I try not to be boring."
+baseurl: ""
+url: "https://georgiatech.ai"
+youtube_username: gatechai
+spotify_username:  gatechai
 
 # Build settings
-theme: minima
-plugins:
-  - jekyll-archives
-  - jekyll-feed
-  - jekyll-redirect-from
-  - jekyll-seo-tag
+markdown: kramdown
+permalink: pretty
 
-sass:
-  sass_dir: _sass
-  style: compressed
-
-jekyll-archives:
-  enabled:
-    - tags
-  layouts:
-    tag: tag
-  permalinks:
-    tag: '/tag/:name/'
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge

@@ -18,10 +18,9 @@ SIT-UP has three core components:
 3. **Height-adjustable desk**: Equipped with linear actuators and a control unit.
 
 <div style="text-align: center;">
-    <img src="images/hri/side-front.png" width=50% />
+    <img src="/assets/hri/side-front.png" width="70%" />
     <em><br>Fig. 1. <b>Posture Measurements Collected:</b> Side and front profiles.</em>
 </div>
-<br>
 
 ### Experimental Design
 
@@ -51,7 +50,11 @@ Once the 35-minute mark passed, a few wrap-up questions were asked:
 
 ### Computer Vision System
 
-A dual-camera system uses one camera positioned in front and another at the side. The front camera measures leaning and level misalignment of shoulders. The side camera identifies head posture and slouching. Posture is evaluated every 0.5 seconds and key metrics are logged, including:
+A dual-camera system uses one camera positioned in front and another at the side. 
+
+<iframe width="720" height="400" src="https://www.youtube.com/embed/W3mUOfoK-hg?si=PbCySZheUHO1ZvdU&amp;start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+The front camera measures leaning and level misalignment of shoulders. The side camera identifies head posture and slouching. Posture is evaluated every 0.5 seconds and key metrics are logged, including:
 
 - **Torso inclination**: Angle between hip and shoulder in 3D space.
 - **Spine length**: 3D distance between hip and shoulder.
@@ -64,8 +67,6 @@ A dual-camera system uses one camera positioned in front and another at the side
 - **Lean_**: Normalized lean based on lean_min and lean_max.
 - **Front Score**: 40 * (1 - level_) + 60 * (1 - lean_)
 - **Side Score**: 70 * neck_ + 30 * torso_
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xIA5m8sALdY?si=Jh2FluNnE28FIqcx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 A composite posture score was calculated as: `55 * neck_ + 40 * torso_ + 3 * (1 – lean_) + 2 * (1 – level_)`. The weights prioritize neck and torso inclinations (55% and 40%, respectively). These have a stronger correlation with postural health. Lean and level are assigned lower weights (3% and 2%, respectively) as they are typically less critical. This score reflects the frequency and duration of poor posture instances, the magnitude of postural deviations, and the time spent in optimal posture ranges.
 
@@ -86,8 +87,6 @@ Interventions occur only when bad posture persists beyond a defined threshold an
 - **Posture recovery rate**: Measure how quickly composite_score improves after dropping below 50
 - **Intervention necessity**: Track the frequency of interventions over time to see if users improve naturally
 
-### Desk Height Adjustment
-
 The original control board of a commercial standing desk was replaced with an Arduino Nano BLE board and a motor driver. The motor driver uses an H-bridge configuration, which controls the desk’s direction and speed. The Arduino Nano BLE board sends signals to the H-bridge to control the direction of the motor, while the speed is preset using the variable resistor. This setup allows for precise and gradual height adjustments based on the user’s posture.
 
 ### Results
@@ -95,58 +94,46 @@ The original control board of a commercial standing desk was replaced with an Ar
 Far from ideal, but only a single user was in the control group. We were not able to recruit too many participants for a pilot study of this nature. This user’s measurements were perturbed and averaged across 5 instances. The composite scores were relatively stable but exhibited a slightly downward trend as time progressed. This decline can be attributed to the natural fatigue associated with prolonged computer use.
 
 <div style="text-align: center;">
-    <img src="images/hri/control_composite_score_over_time.png" width=50% />
-    <em><br>Fig. 2. <b>Control Group:</b> A single user was treated as the baseline, and measurements were  
-    perturbed and averaged across five instances. The control group achieved an overall mean composite score 
-    of 61.96 and a standard deviation of 16.98, with a total of 18,101 data points collected.</em>
+    <img src="/assets/hri/control_composite_score_over_time.png" width="60%" />
+    <em><br>Fig. 2. <b>Control Group:</b> A single user was treated as the baseline, and measurements were perturbed and averaged across five instances. The control group achieved an overall mean composite score of 61.96 and a standard deviation of 16.98, with a total of 18,101 data points collected.</em>
 </div>
 <br>
 
 The passive group (n=5) exhibited more pronounced variations in posture scores, with lower mean values and wider variance bands compared to the control group. This reflects the diversity in user responsiveness to varying stimuli. Some users appeared highly responsive to auditory cues, while others barely noticed and/or struggled to interpret the feedback.
 
 <div style="text-align: center;">
-    <img src="images/hri/passive_composite_score_over_time.png" width=50% />
-    <em><br>Fig. 3. <b>Passive Group:</b> With the passive group, the mean is lower and the variance bands are 
-    larger due to a diverse user pool. The passive group achieved an overall mean composite score of 53.65 
-    and a standard deviation of 28.55, with a total of 17,845 data points collected.</em>
+    <img src="/assets/hri/passive_composite_score_over_time.png" width="60%" />
+    <em><br>Fig. 3. <b>Passive Group:</b> With the passive group, the mean is lower and the variance bands are larger due to a diverse user pool. The passive group achieved an overall mean composite score of 53.65 and a standard deviation of 28.55, with a total of 17,845 data points collected.</em>
 </div>
-<br>
 
 The individual user graphs reveal deeper insights. In the left panel, the posture score for a specific user showed a noticeable decline during the vibration phase. This user confessed that the vibrations were far too subtle. In contrast, the right panel shows another user with consistently high posture scores. Either they responded well to both modalities or they have naturally great posture. It’s hard to say. This is what makes it challenging to determine which intervention – vibration or sound – is more effective.
 
 <div style="text-align: center;">
-    <img src="images/hri/combined_posture_data.png" width=60% />
-    <em><br>Fig. 4. <b>Passive Group User Analysis:</b> (Left) User with a drop in posture score during the vibration phase. (Right) User with consistently good posture across both modalities.</em>
+    <img src="/assets/hri/combined_posture_data.png" width="60%" />
+    <em><br><br>Fig. 4. <b>Passive Group User Analysis:</b> (Left) User with a drop in posture score during the vibration phase. (Right) User with consistently good posture across both modalities.</em>
 </div>
-<br>
 
 Box plots were created for this very purpose. The median score for sound is slightly higher than vibration, suggesting that sound may be marginally more effective at prompting behavior change.
 
 <div style="text-align: center;">
-    <img src="images/hri/intervention_effectiveness.png" width=50% />
-    <em><br>Fig. 5. <b>Effectiveness of Intervention Modalities:</b> Side-by-side box plots comparing the 
-    effectiveness of sound and vibration feedback for posture correction. Sound was found to be slightly 
-    more effective, with higher median scores compared to vibration.</em>
+    <img src="/assets/hri/intervention_effectiveness.png" width="60%" />
+    <em><br><br>Fig. 5. <b>Effectiveness of Intervention Modalities:</b> Side-by-side box plots comparing the effectiveness of sound and vibration feedback for posture correction. Sound was found to be slightly more effective, with higher median scores compared to vibration.</em>
 </div>
-<br>
 
 With the active group (n=5), the mean was slightly higher, and the variance bands were narrower than the passive group. The desk height adjustments were more effective than the passive interventions. It turns out that the mean score was lower than the control group likely due to the novel medium and/or user differences.
 
 <div style="text-align: center;">
-    <img src="images/hri/active_composite_score_over_time.png" width=50% />
-    <em><br>Fig. 6. <b>Active Group:</b> With the active group, the mean is slightly higher and the variance 
-    bands are narrower than the passive group. The active group achieved an overall mean composite score of 
-    55.41 and a standard deviation of 18.81, with a total of 20,181 data points collected.</em>
+    <img src="/assets/hri/active_composite_score_over_time.png" width="60%" />
+    <em><br><br>Fig. 6. <b>Active Group:</b> With the active group, the mean is slightly higher and the variance bands are narrower than the passive group. The active group achieved an overall mean composite score of 55.41 and a standard deviation of 18.81, with a total of 20,181 data points collected.</em>
 </div>
 <br>
 
 **Qualitative feedback**. A post-session questionnaire, adapted from the User Experience Questionnaire (UEQ), assessed effectiveness, intelligence, comfort, and fatigue with the SIT-UP system. Users in both the passive and active groups perceived the system as significantly more effective and intelligent compared to those in the control group. The productivity score showed minimal improvement, meaning users did not gain any superpowers while sitting upright. Comfort, fatigue and intrusiveness were rated less favorably in both intervention groups.
 
 <div style="text-align: center;">
-    <img src="images/hri/qual-feedback.png" width=50% />
-    <em><br>Table 1. <b>Post-study questionnaire:</b> Survey results from the three experimental groups.</em>
+    <img src="/assets/hri/qual-feedback.png" width="60%" />
+    <em><br><br>Table 1. <b>Post-study questionnaire:</b> Survey results from the three experimental groups.</em>
 </div>
-<br>
 
 **Statistical tests**. Four hypotheses were tested comparing mean composite scores during and after passive and active interventions to baseline. Wilcoxon paired statistical comparisons were conducted. tl;dr: No statistically significant conclusions. Here's a rhyme:
 
