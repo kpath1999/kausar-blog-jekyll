@@ -12,11 +12,9 @@ maintenance. The Sting-Sense project addresses these issues by implementing an I
 
 <iframe src="https://kpath1999.github.io/gtbusmap" width="100%" height="600px" style="border:none;"></iframe>
 
-At the heart of Sting-Sense is a compact hardware unit—a microcontroller paired with a GPS module and an IMU sensor. These devices were installed on buses serving four major routes: gold, green, blue, and red. The gold route is particularly important, as it links the center of Georgia Tech's campus with Technology Square and the Midtown MARTA Station.<sup>1</sup>
-
 <div style="text-align: center;">
     <img src="/assets/mci/hardware-setup.png" width="100%" />
-    <em><br>Fig. 1. <b>Hardware Setup in the Bus:</b> x</em>
+    <em><br>Fig. 1. <b>Hardware Setup in the Bus:</b> A microcontroller paired with a GPS module and an IMU sensor. These devices were installed on buses serving four major routes: gold, green, blue, and red. The gold route is most important; it links the center of Georgia Tech's campus with Tech Square and the Midtown MARTA Station.<sup>1</sup></em>
 </div>
 
 ### Data Collection
@@ -34,7 +32,7 @@ More on the metrics used for data collection:
 
 **Analyzing traffic conditions**. We use GPS data to understand traffic patterns. Speed data from the GPS is grouped into four congestion levels (quartiles). This method helps us discern traffic patterns across the day and in different parts of campus. The slowest speeds (1st quartile) indicate high congestion.
 
-'''ruby
+```python
 def calculate_traffic_congestion(df):
     speed_stats = df['speed'].describe()
 
@@ -55,13 +53,13 @@ def calculate_traffic_congestion(df):
 
     # Apply the function to each speed value
     return df.apply(calculate_congestion_level, axis=1)
-'''
+```
 
 **Assessing road quality**. Vertical acceleration data is used to assess road quality. A measure is created called Standard Deviation of Vertical Acceleration (SDVA). SDVA is calculated by dividing the variation in vertical movement by the average speed. This helps detect bumps or issues in the road.
 
 \$$\ \text{SDVA} = \frac{\sigma(a_z)}{\bar{v}} $$ where $\sigma(a_z)$ is the standard deviation of vertical acceleration and $\bar{v}$ is the average speed over a segment. To focus on bumps and ignore small vibrations, the Butterworth low-pass filter is used. Thresholds are based on real-world data to classify road conditions into four categories.
 
-'''ruby
+```python
 def calculate_road_condition(df, window_size=100):
     
     # Apply low-pass filter to vertical acceleration
@@ -90,7 +88,7 @@ def calculate_road_condition(df, window_size=100):
     df['road_condition'] = np.select(conditions, values)
 
     return df
-'''
+```
 
 ### Future Improvements
 

@@ -5,7 +5,7 @@ description: "I like to write, design, code, and share some of the cool projects
 baseurl: ""
 url: "https://www.kausarpatherya.com"
 github_username: kpath1999
-linkedin:  k-path
+linkedin_username:  k-path
 
 # Build settings
 markdown: kramdown
