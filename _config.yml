@@ -4,8 +4,8 @@ email:
 description: "I like to write, design, code, and share some of the cool projects I'm working on. I try not to be boring."
 baseurl: ""
 url: "https://www.kausarpatherya.com"
-youtube_username: gatechai
-spotify_username:  gatechai
+github_username: kpath1999
+linkedin:  k-path
 
 # Build settings
 markdown: kramdown

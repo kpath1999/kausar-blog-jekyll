@@ -5,4 +5,4 @@ permalink: /about/
 includelink: true
 ---
 
-Click [here](https://georgiatech.ai/about).
+[Redirect](https://georgiatech.ai/about).
