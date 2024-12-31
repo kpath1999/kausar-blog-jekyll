@@ -7,30 +7,38 @@ excerpt: Sting-Sense provides visibility into Georgia Tech bus behavior at diffe
 ---
 Ever missed a bus on campus and wondered why traffic seems to flow so unpredictably? Or driven over a bumpy road and thought, "Someone should fix this!" At Georgia Tech, the Sting-Sense project is trying to tackle these issues, paving the way for smarter transportation solutions.
 
-Urban campus transportation systems face numerous challenges, including traffic congestion and road
-maintenance. The Sting-Sense project addresses these issues by implementing an IoT system on GT’s bus network. This system provides visibility into bus behavior across different times of the day, enabling data-driven decision making.
+**The challenge: traffic and maintenance on a busy campus**. Urban campus transportation systems face numerous challenges, including traffic congestion and road maintenance. The Sting-Sense project addresses these issues by implementing an IoT system on GT’s bus network. This system provides visibility into bus behavior across different times of the day, enabling data-driven decision making.
 
 <iframe src="https://kpath1999.github.io/gtbusmap" width="100%" height="600px" style="border:none;"></iframe>
 
+**Hardware setup: compact yet powerful**. The Sting-Sense system consists of a custom-built hardware package featuring a microcontroller, a GPS module, and an inertial measurement unit (IMU) sensor. These devices were installed on buses serving four major routes: gold, green, blue, and red. The gold route, in particular, is a vital link between Georgia Tech’s central campus, Tech Square, and the Midtown MARTA Station.
+
 <div style="text-align: center;">
     <img src="/assets/mci/hardware-setup.png" width="100%" />
-    <em><br>Fig. 1. <b>Hardware Setup in the Bus:</b> A microcontroller paired with a GPS module and an IMU sensor. These devices were installed on buses serving four major routes: gold, green, blue, and red. The gold route is most important; it links the center of Georgia Tech's campus with Tech Square and the Midtown MARTA Station.<sup>1</sup></em>
+    <em><br>Fig. 1. <b>Hardware Setup:</b> Compact and efficient, designed to fit seamlessly into the campus bus fleet.</em>
 </div>
 
-### Data Collection
+Data collection: metrics that matter. To analyze bus behavior and road quality, the Sting-Sense system collects data on three key metrics:
 
-More on the metrics used for data collection:
+1. **Timing**: Precise timestamps record the exact moment each data point is logged, enabling temporal analysis of traffic patterns.
+2. **Location**: GPS tracks the real-time movement of buses, providing insights into route efficiency and congestion hotspots.
+3. **Movement**: IMU sensors capture acceleration and orientation, crucial for detecting road anomalies and assessing driver performance.
 
-1. **Precise Timing**: A timestamp records the exact date and time of each data point.
-2. **Location Tracking**: GPS logs where the buses travel throughout the day.
-3. **Movement Analysis**: The IMU sensor captures acceleration and orientation data.
+For the initial mapping of bus routes, we relied on the Sensor Logger app, which allowed us to collect data from various onboard sensors with minimal setup. This early-stage mapping informed the placement and calibration of our custom hardware.
 
 <div style="text-align: center;">
-    <img src="/assets/mci/sample-data.png" width="100%" />
-    <em><br>Fig. 2. <b>Sample Raw Data from the Sting-Sense System:</b> Latitude and longitude come from the GPS system; acceleration and the rest are from the IMU.</em>
+    <img src="/assets/mci/sensor-logger.png" width="100%" /> 
+    <em><br>Fig. 2. <b>Early Data Collection:</b> The Sensor Logger app provided a user-friendly interface for capturing multi-sensor data during the project's pilot phase.</em>
 </div>
 
-**Analyzing traffic conditions**. We use GPS data to understand traffic patterns. Speed data from the GPS is grouped into four congestion levels (quartiles). This method helps us discern traffic patterns across the day and in different parts of campus. The slowest speeds (1st quartile) indicate high congestion.
+The hardware setup took some time to build out, so we used the Sensor Logger app on an iPhone for the initial mapping of bus routes. It offers a range of sensors, including an accelerometer, gyroscope, GPS, barometer, and more. You can easily export all the data to a CSV for further processing.
+
+<div style="text-align: center;">
+    <img src="/assets/mci/sensor-logger.png" width="100%" />
+    <em><br>Fig. 2. <b>Sensor Logger's Intuituve Interface:</b> You can select the sensors you want and adjust sampling frequencies as well. Recordings can be initiated with a single tap, and the app continues to log data even when running in the background.</em>
+</div>
+
+**Traffic congestion analysis**. We use GPS data to understand traffic patterns. Speed data from the GPS is grouped into four congestion levels (quartiles). This method helps us discern traffic patterns across the day and in different parts of campus. The slowest speeds (1st quartile) indicate high congestion.
 
 ```python
 def calculate_traffic_congestion(df):
@@ -55,7 +63,7 @@ def calculate_traffic_congestion(df):
     return df.apply(calculate_congestion_level, axis=1)
 ```
 
-**Assessing road quality**. Vertical acceleration data is used to assess road quality. A measure is created called Standard Deviation of Vertical Acceleration (SDVA). SDVA is calculated by dividing the variation in vertical movement by the average speed. This helps detect bumps or issues in the road.
+**Road quality assessment**. Vertical acceleration data is used to assess road quality. A measure is created called Standard Deviation of Vertical Acceleration (SDVA). SDVA is calculated by dividing the variation in vertical movement by the average speed. This helps detect bumps or issues in the road.
 
 \$$\ \text{SDVA} = \frac{\sigma(a_z)}{\bar{v}} $$ where $\sigma(a_z)$ is the standard deviation of vertical acceleration and $\bar{v}$ is the average speed over a segment. To focus on bumps and ignore small vibrations, the Butterworth low-pass filter is used. Thresholds are based on real-world data to classify road conditions into four categories.
 
@@ -92,16 +100,13 @@ def calculate_road_condition(df, window_size=100):
 
 ### Future Improvements
 
-We plan to switch from storing data on SD cards to sending it directly over the cellular network. This means:
+To maximize the impact of Sting-Sense, we plan to upgrade the system with cellular network connectivity. This will allow for real-time data uploads to the cloud, making information instantly accessible for analysis and decision-making.
 
-- Data will be available right away
-- We can upload information straight to cloud storage
-- It will be easier to manage and access the data
+Our big goal is to build a system that can work on its own. This means processing data as soon as it's collected and making decisions without human help. The implementation of predictive maintenance strategies in IoT systems in transportation brings several benefits.
 
-Our big goal is to build a system that can work on its own. This means processing data as soon as it's collected and making decisions without human help.
-
-The implementation of predictive maintenance strategies in IoT systems in transportation brings several benefits. It allows for a shift from reactive to proactive maintenance, minimizing unplanned downtime and disruptions in transportation services. By addressing maintenance needs before failures occur, organizations can improve the reliability and availability of vehicles and infrastructure, enhancing passenger safety and customer satisfaction.
+- It allows for a shift from reactive to proactive maintenance, minimizing unplanned downtime and disruptions in transportation services.
+- By addressing maintenance needs before failures occur, organizations can improve the reliability and availability of vehicles and infrastructure, enhancing passenger safety and customer satisfaction.
 
 **Conclusion**. This pilot project can be improved further by adding more bus routes and including other campus vehicles. We could make this system even more useful by using machine learning to predict when buses need maintenance and finding better routes for buses. If we link Sting-Sense with other campus information like class schedules and event calendars, we could make the bus service respond better to campus needs.<sup>2</sup>
 
-As we continue to improve Sting-Sense, Georgia Tech could set new standards for smart campus transportation and become a model for other schools and cities to follow. The project aligns with Georgia Tech's goal to have 100% clean transportation by 2030. By leveraging IoT technologies, we can optimize route planning, enhance passenger experiences, monitor vehicle health in real-time, improve safety, and enable demand-responsive transit services.<sup>3</sup>
+**What's next?** As we continue to improve Sting-Sense, Georgia Tech could set new standards for smart campus transportation and become a model for other schools and cities to follow. The project aligns with Georgia Tech's goal to have 100% clean transportation by 2030. By leveraging IoT technologies, we can optimize route planning, enhance passenger experiences, monitor vehicle health in real-time, improve safety, and enable demand-responsive transit services.<sup>3</sup>
