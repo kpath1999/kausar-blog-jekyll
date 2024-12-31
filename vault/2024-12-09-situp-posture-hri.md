@@ -7,7 +7,7 @@ excerpt: A novel approach to posture correction by integrating computer vision w
 ---
 The SIT-UP system represents a novel approach to posture correction by integrating computer vision with vibratory and auditory feedback, utilizing a height-adjustable standing desk capable of autonomous adjustments. It aims to promote healthier postural habits while minimizing disruption to users' workflows. The study evaluated the system's ability to improve posture through a user study with three groups: control, passive and active interventions. Adjusting the desk height when bad posture was detected proved to be an effective strategy. Future research could focus on long-term studies and personalized calibration for individuals with specific needs.
 
-**Introduction**. Posture is how you hold your body. Humans did not evolve to sit for hours in unnatural positions working at a desk. As people tire mentally, they pay less attention to their posture. Working for long hours can cause unconscious slouching which reinforces poor postural habits. Beyond poor aesthetics, slouching or slumping can misalign the skeletal system, wear at your spine, cause breathing issues, and many other problems. It is in your best interest to maintain good posture.<sup>1</sup>
+**Introduction**. Posture is how you hold your body. Humans did not evolve to sit for hours in unnatural positions working at a desk. As people tire mentally, they pay less attention to their posture. Working for long hours can cause unconscious slouching which reinforces poor postural habits. Beyond poor aesthetics, slouching or slumping can misalign the skeletal system, wear at your spine, cause breathing issues, and many other problems. It is in your best interest to maintain good posture.
 
 **Related work**. Our lifestyles don’t make this any easier. According to a recent study, 80% of the jobs in the U.S. involve prolonged computer or mobile device use. The risks linked to sedentary behavior are now ever present. Numerous posture correction systems have surfaced, including wearable sensors and ‘smart chairs’, but none have taken off. Challenges such as cognitive load and workflow disruptions continue to persist. There is a need for minimally disruptive, adaptive systems that can be integrated into our daily workflows. Our system promotes healthier postural habits without compromising productivity.
 
@@ -50,10 +50,8 @@ Once the 35-minute mark passed, a few wrap-up questions were asked:
 
 ### Computer Vision System
 
-A dual-camera system uses one camera positioned in front and another at the side.
-
+A dual-camera system uses one camera positioned in front and another at the side. 
 <iframe width="720" height="400" src="https://www.youtube.com/embed/W3mUOfoK-hg?si=PbCySZheUHO1ZvdU&amp;start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 The front camera measures leaning and level misalignment of shoulders. The side camera identifies head posture and slouching. Posture is evaluated every 0.5 seconds and key metrics are logged, including:
 
 - **Torso inclination**: Angle between hip and shoulder in 3D space.
