@@ -52,7 +52,10 @@ Once the 35-minute mark passed, a few wrap-up questions were asked:
 
 A dual-camera system uses one camera positioned in front and another at the side.
 
-<iframe width="720" height="400" src="https://www.youtube.com/embed/W3mUOfoK-hg?si=PbCySZheUHO1ZvdU&amp;start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="text-align: center;">
+    <iframe width="600" height="280" src="https://www.youtube.com/embed/W3mUOfoK-hg?si=PbCySZheUHO1ZvdU&amp;start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <em><br>Fig. 2. <b>Live demonstration:</b> Teammates Justin Wit and Anwesha Gorantla demonstrating the SIT-UP system's dual camera setup.</em>
+</div>
 
 The front camera measures leaning and level misalignment of shoulders. The side camera identifies head posture and slouching. Posture is evaluated every 0.5 seconds and key metrics are logged, including:
 
@@ -95,35 +98,35 @@ Far from ideal, but only a single user was in the control group. We were not abl
 
 <div style="text-align: center;">
     <img src="/assets/hri/control_composite_score_over_time.png" width="60%" />
-    <em><br>Fig. 2. <b>Control Group:</b> A single user was treated as the baseline, and measurements were perturbed and averaged across five instances. The control group achieved an overall mean composite score of 61.96 and a standard deviation of 16.98, with a total of 18,101 data points collected.</em>
+    <em><br>Fig. 3. <b>Control Group:</b> A single user was treated as the baseline, and measurements were perturbed and averaged across five instances. The control group achieved an overall mean composite score of 61.96 and a standard deviation of 16.98, with a total of 18,101 data points collected.</em>
 </div>
 
 The passive group (n=5) exhibited more pronounced variations in posture scores, with lower mean values and wider variance bands compared to the control group. This reflects the diversity in user responsiveness to varying stimuli. Some users appeared highly responsive to auditory cues, while others barely noticed and/or struggled to interpret the feedback.
 
 <div style="text-align: center;">
     <img src="/assets/hri/passive_composite_score_over_time.png" width="60%" />
-    <em><br>Fig. 3. <b>Passive Group:</b> With the passive group, the mean is lower and the variance bands are larger due to a diverse user pool. The passive group achieved an overall mean composite score of 53.65 and a standard deviation of 28.55, with a total of 17,845 data points collected.</em>
+    <em><br>Fig. 4. <b>Passive Group:</b> With the passive group, the mean is lower and the variance bands are larger due to a diverse user pool. The passive group achieved an overall mean composite score of 53.65 and a standard deviation of 28.55, with a total of 17,845 data points collected.</em>
 </div>
 
 The individual user graphs reveal deeper insights. In the left panel, the posture score for a specific user showed a noticeable decline during the vibration phase. This user confessed that the vibrations were far too subtle. In contrast, the right panel shows another user with consistently high posture scores. Either they responded well to both modalities or they have naturally great posture. It’s hard to say. This is what makes it challenging to determine which intervention – vibration or sound – is more effective.
 
 <div style="text-align: center;">
     <img src="/assets/hri/combined_posture_data.png" width="60%" />
-    <em><br><br>Fig. 4. <b>Passive Group User Analysis:</b> (Left) User with a drop in posture score during the vibration phase. (Right) User with consistently good posture across both modalities.</em>
+    <em><br><br>Fig. 5. <b>Passive Group User Analysis:</b> (Left) User with a drop in posture score during the vibration phase. (Right) User with consistently good posture across both modalities.</em>
 </div>
 
 Box plots were created for this very purpose. The median score for sound is slightly higher than vibration, suggesting that sound may be marginally more effective at prompting behavior change.
 
 <div style="text-align: center;">
     <img src="/assets/hri/intervention_effectiveness.png" width="60%" />
-    <em><br><br>Fig. 5. <b>Effectiveness of Intervention Modalities:</b> Side-by-side box plots comparing the effectiveness of sound and vibration feedback for posture correction. Sound was found to be slightly more effective, with higher median scores compared to vibration.</em>
+    <em><br><br>Fig. 6. <b>Effectiveness of Intervention Modalities:</b> Side-by-side box plots comparing the effectiveness of sound and vibration feedback for posture correction. Sound was found to be slightly more effective, with higher median scores compared to vibration.</em>
 </div>
 
 With the active group (n=5), the mean was slightly higher, and the variance bands were narrower than the passive group. The desk height adjustments were more effective than the passive interventions. It turns out that the mean score was lower than the control group likely due to the novel medium and/or user differences.
 
 <div style="text-align: center;">
     <img src="/assets/hri/active_composite_score_over_time.png" width="60%" />
-    <em><br><br>Fig. 6. <b>Active Group:</b> With the active group, the mean is slightly higher and the variance bands are narrower than the passive group. The active group achieved an overall mean composite score of 55.41 and a standard deviation of 18.81, with a total of 20,181 data points collected.</em>
+    <em><br><br>Fig. 7. <b>Active Group:</b> With the active group, the mean is slightly higher and the variance bands are narrower than the passive group. The active group achieved an overall mean composite score of 55.41 and a standard deviation of 18.81, with a total of 20,181 data points collected.</em>
 </div>
 
 **Qualitative feedback**. A post-session questionnaire, adapted from the User Experience Questionnaire (UEQ), assessed effectiveness, intelligence, comfort, and fatigue with the SIT-UP system. Users in both the passive and active groups perceived the system as significantly more effective and intelligent compared to those in the control group. The productivity score showed minimal improvement, meaning users did not gain any superpowers while sitting upright. Comfort, fatigue and intrusiveness were rated less favorably in both intervention groups.

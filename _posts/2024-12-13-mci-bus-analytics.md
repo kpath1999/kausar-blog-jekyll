@@ -9,33 +9,29 @@ Ever missed a bus on campus and wondered why traffic seems to flow so unpredicta
 
 **The challenge: traffic and maintenance on a busy campus**. Urban campus transportation systems face numerous challenges, including traffic congestion and road maintenance. The Sting-Sense project addresses these issues by implementing an IoT system on GT’s bus network. This system provides visibility into bus behavior across different times of the day, enabling data-driven decision making.
 
-<iframe src="https://kpath1999.github.io/gtbusmap" width="100%" height="600px" style="border:none;"></iframe>
-
-**Hardware setup: compact yet powerful**. The Sting-Sense system consists of a custom-built hardware package featuring a microcontroller, a GPS module, and an inertial measurement unit (IMU) sensor. These devices were installed on buses serving four major routes: gold, green, blue, and red. The gold route, in particular, is a vital link between Georgia Tech’s central campus, Tech Square, and the Midtown MARTA Station.
-
 <div style="text-align: center;">
-    <img src="/assets/mci/hardware-setup.png" width="100%" />
-    <em><br>Fig. 1. <b>Hardware Setup:</b> Compact and efficient, designed to fit seamlessly into the campus bus fleet.</em>
+    <iframe src="https://kpath1999.github.io/gtbusmap" width="80%" height="600px" style="border:none;"></iframe>
+    <em><br>Fig. 1. <b>Dashboard MVP:</b> Sting-Sense visualization. You can see all the routes mapped out, with the various colors denoting the road conditions.</em>
 </div>
 
-Data collection: metrics that matter. To analyze bus behavior and road quality, the Sting-Sense system collects data on three key metrics:
-
-1. **Timing**: Precise timestamps record the exact moment each data point is logged, enabling temporal analysis of traffic patterns.
-2. **Location**: GPS tracks the real-time movement of buses, providing insights into route efficiency and congestion hotspots.
-3. **Movement**: IMU sensors capture acceleration and orientation, crucial for detecting road anomalies and assessing driver performance.
-
-For the initial mapping of bus routes, we relied on the Sensor Logger app, which allowed us to collect data from various onboard sensors with minimal setup. This early-stage mapping informed the placement and calibration of our custom hardware.
+**Hardware setup: compact yet powerful**. The Sting-Sense system consists of a custom-built hardware package featuring a microcontroller, a GPS module, and an inertial measurement unit (IMU) sensor. These devices were installed on buses serving four major routes: gold, green, blue, and red. The gold route, in particular, is a vital link between Georgia Tech’s central campus, Tech Square, and the Midtown MARTA Station.<sup>1</sup>
 
 <div style="text-align: center;">
-    <img src="/assets/mci/sensor-logger.png" width="100%" /> 
-    <em><br>Fig. 2. <b>Early Data Collection:</b> The Sensor Logger app provided a user-friendly interface for capturing multi-sensor data during the project's pilot phase.</em>
+    <img src="/assets/mci/hardware-setup.png" width="70%" />
+    <em><br>Fig. 2. <b>Hardware Setup:</b> Compact and efficient, designed to fit seamlessly into the campus bus fleet.</em>
 </div>
+
+**Data collection: metrics that matter**. To analyze bus behavior and road quality, the Sting-Sense system collects data on three key metrics:
+
+1. Timing: Precise timestamps record the exact moment each data point is logged, enabling temporal analysis of traffic patterns.
+2. Location: GPS tracks the real-time movement of buses, providing insights into route efficiency and congestion hotspots.
+3. Movement: IMU sensors capture acceleration and orientation, crucial for detecting road anomalies and assessing driver performance.
 
 The hardware setup took some time to build out, so we used the Sensor Logger app on an iPhone for the initial mapping of bus routes. It offers a range of sensors, including an accelerometer, gyroscope, GPS, barometer, and more. You can easily export all the data to a CSV for further processing.
 
 <div style="text-align: center;">
-    <img src="/assets/mci/sensor-logger.png" width="100%" />
-    <em><br>Fig. 2. <b>Sensor Logger's Intuituve Interface:</b> You can select the sensors you want and adjust sampling frequencies as well. Recordings can be initiated with a single tap, and the app continues to log data even when running in the background.</em>
+    <img src="/assets/mci/sensor-logger.png" width="20%" /> 
+    <em><br>Fig. 3. <b>Early Data Collection:</b> The Sensor Logger app provided a user-friendly interface for capturing multi-sensor data during the project's pilot phase.</em>
 </div>
 
 **Traffic congestion analysis**. We use GPS data to understand traffic patterns. Speed data from the GPS is grouped into four congestion levels (quartiles). This method helps us discern traffic patterns across the day and in different parts of campus. The slowest speeds (1st quartile) indicate high congestion.

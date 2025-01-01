@@ -1,11 +1,13 @@
 # Site settings
 title: Kausar Patherya
 email: 
-description: "I like to write, design, code, and share some of the cool projects I'm working on. I try not to be boring."
+description: "I like to write, design, code, and share some of the cool projects I'm working on. From AI to CrossFit, I'm all about pushing limits. This blog tries to capture that. I try not to be boring."
 baseurl: ""
 url: "https://www.kausarpatherya.com"
 github_username: kpath1999
 linkedin_username:  k-path
+youtube_username: gatechai
+spotify_username: gatechai
 
 # Build settings
 markdown: kramdown
