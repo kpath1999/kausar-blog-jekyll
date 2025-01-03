@@ -58,12 +58,7 @@ The PPO training loop encompasses four essential steps. Initially, the agent int
 
 The policy network is updated using a clipped objective function:
 
-\$$\
-L_{\text{clip}}(\theta) = \mathbb{E}_t \left[ 
-    \min \left( r_t(\theta) \hat{A}_t, 
-    \text{clip}(r_t(\theta), 1 - \epsilon, 1 + \epsilon) \hat{A}_t \right) 
-\right]
-$$ where
+\$$\ L_{\text{clip}}(\theta) = \mathbb{E}_t \left[ \min \left( r_t(\theta) , \text{clip}(r_t(\theta), 1 \pm \epsilon)\right) \hat{A}_t \right] $$ where
 
 \$$\ r_t(\theta) = \frac{\pi_\theta(a_t \mid s_t)}{\pi_{\theta_{\text{old}}}(a_t \mid s_t)} $$ is the probability ratio, $ \hat{A}_t $ is the advantage, and $ \epsilon $ controls the clipping range.
 
@@ -78,21 +73,21 @@ We conducted a series of experiments to evaluate the performance of A2C, DQN, an
 **Actor-Critic (A2C)**. A2C's performance partially contradicts H3. While its synchronous nature might slow learning, it demonstrates stable convergence. The decreasing mean episode length (Fig. 2a) indicates efficient task completion. The stabilizing action mean (Fig. 2b) and action standard deviation (Fig. 2c) suggest a balance between exploration and exploitation, crucial for complex manipulation tasks.
 
 <div style="text-align: center;">
-    <img src="/assets/advml/a2c/a2c-first-series.jpg" width="85%" />
+    <img src="/assets/advml/a2c/a2c-first-series.jpg" width="95%" />
     <em><br>Fig. 1. <b>A2C Performance Metrics:</b> Mean episode length shows initial decrease and stabilization, indicating policy convergence. Action mean increases and stabilizes, suggesting the policy is focusing on optimal actions. Action standard deviation shows initial exploration followed by a balance between exploration and exploitation.</em>
 </div>
 
 The low value error (Fig. 3a) indicates an accurate critic, while the stable gradient norm (Fig. 3b) and clip loss (Fig. 3c) suggest robust policy updates. These metrics demonstrate A2C's ability to learn effectively in the high-dimensional space, contrary to our initial hypothesis.
 
 <div style="text-align: center;">
-    <img src="/assets/advml/a2c/a2c-second-series.jpg" width="85%" />
+    <img src="/assets/advml/a2c/a2c-second-series.jpg" width="95%" />
     <em><br>Fig. 2. <b>A2C Training Diagnostics:</b> Value error shows consistent low error, indicating a well-trained critic. Gradient norm displays stability with occasional spikes, reflecting major policy updates. Clip loss fluctuations indicate a balance between policy retention and adaptation.</em>
 </div>
 
 **Deep-Q-Network (DQN)**. When analyzing the performance of DQN, we observe that overall learning progresses slowly and gradually over episodes. Specifically, the reward density over episodes (Fig. 4a) values for rewards 0 and 1 are relatively equally distributed and balanced. It measures how concentrated rewards are over episodes, providing insight into the distribution of rewards throughout training. We also measure reward frequency over episodes (Fig. 4b) and mean reward over episodes (Fig. 4c), which further illustrate the learning progress of DQN. Reward frequency tracks how often each reward value is received during an episode. Our results indicate that these values remain relatively consistent over episodes, although slightly higher rewards tend to occur as training progresses. On the other hand, mean reward over episodes reflects the average reward obtained by the agent per episode. This metric indicates stalled and gradual learning, as values plateau with occasional minor fluctuations.
 
 <div style="text-align: center;">
-    <img src="/assets/advml/dqn/dqn-first-series.jpeg" width="85%" />
+    <img src="/assets/advml/dqn/dqn-first-series.jpeg" width="95%" />
     <em><br>Fig. 3. <b>DQN Performance Metrics:</b> Reward density shows balanced distribution between
 rewards 0 and 1. Reward frequency remains consistent with slight improvement over time. Mean reward indicates gradual learning with occasional plateaus.</em>
 </div>
@@ -100,14 +95,14 @@ rewards 0 and 1. Reward frequency remains consistent with slight improvement ove
 DQN's performance aligns with H2. The balanced reward density (Fig. 5a) and consistent reward frequency (Fig. 5b) suggest difficulty in achieving fine-grained control. The gradual increase in mean reward (Fig. 5c) indicates slow learning progress, further supporting our hypothesis. The epsilon decay (Fig. 6a) shows reduced exploration over time, potentially limiting fine-grained control learning. Periodic spikes in loss values (Fig. 6b) and fluctuations in Q-values (Fig. 6c) further support H2, indicating DQN's struggle with precise control in this high-dimensional task.
 
 <div style="text-align: center;">
-    <img src="/assets/advml/dqn/dqn-second-series.jpeg" width="85%" />
+    <img src="/assets/advml/dqn/dqn-second-series.jpeg" width="95%" />
     <em><br>Fig. 4. <b>DQN Training Diagnostics:</b> Epsilon decay shows reduced exploration over time. Loss values display periodic spikes, indicating instability. Q-value increases steadily with fluctuations, reflecting ongoing learning and occasional instability.</em>
 </div>
 
 **Proximal Policy Optimization (PPO)**. The following figures illustrate key performance metrics collected during training of the PPO agent in the Kuka environment. These metrics provide insights into both the learning dynamics and the agent’s evolving decision-making strategy: mean reward over seasons (Fig. 6a) acts as a high-level indicator of the agent's overall performance. Initially, mean reward decreases, which could be attributed to exploratory behavior. Over time, the mean reward recovers and trends upward as the policy becomes more stable and optimized. Episode reward over seasons (Fig. 6b) offers a closer look at the agent's immediate performance during specific tasks. The steady improvement in episode reward highlights the agent’s progress in task execution as it learns effective strategies. Epsilon over seasons (Fig. 6c) reflects the exploration-exploitation tradeoff, governed by an epsilon-greedy strategy. The graph shows an arithmetic decay in exploration over time, illustrating how the agent transitions from exploratory actions to exploiting its learned policy.
 
 <div style="text-align: center;">
-    <img src="/assets/advml/ppo/ppo-first-series.jpeg" width="85%" />
+    <img src="/assets/advml/ppo/ppo-first-series.jpeg" width="95%" />
     <em><br>Fig. 5. <b>PPO Performance Metrics:</b> Mean reward shows initial decrease followed by consistent improvement, indicating effective learning. Episode reward demonstrates steady improvement in
 task execution. Epsilon decay illustrates the transition from exploration to exploitation.</em>
 </div>
@@ -115,7 +110,7 @@ task execution. Epsilon decay illustrates the transition from exploration to exp
 PPO's performance strongly supports H1. The consistent improvement in mean reward (Fig. 7a) and episode reward (Fig. 7b) demonstrates effective learning in the high-dimensional space. The epsilon decay (Fig. 7c) shows a smooth transition from exploration to exploitation, crucial for mastering fine-grained control. The decreasing beta (Fig. 8a) and high entropy (Fig. 8b) indicate PPO's ability to maintain exploration while refining its policy. The decreasing total loss (Fig. 8c) further supports H1, showing PPO's effectiveness in learning complex control policies.
 
 <div style="text-align: center;">
-    <img src="/assets/advml/ppo/ppo-second-series.jpeg" width="85%" />
+    <img src="/assets/advml/ppo/ppo-second-series.jpeg" width="95%" />
     <em><br>Fig. 6. <b>PPO Training Diagnostics:</b> Beta decay indicates increasing policy confidence. High entropy suggests ongoing exploration. Decreasing total loss demonstrates overall improvement in
 performance and policy stability.</em>
 </div>

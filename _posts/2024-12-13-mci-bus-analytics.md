@@ -5,104 +5,83 @@ date: 2024-12-13 14:16:19 17:00:00 +0100
 description: my MCI project from FA24
 excerpt: Sting-Sense provides visibility into Georgia Tech bus behavior at different times of the day. The system utilized inertial sensors and GPS technology to collect and analyze data from four bus routes.
 ---
-Ever missed a bus on campus and wondered why traffic seems to flow so unpredictably? Or driven over a bumpy road and thought, "Someone should fix this!" At Georgia Tech, the Sting-Sense project is trying to tackle these issues, paving the way for smarter transportation solutions.
-
-**The challenge: traffic and maintenance on a busy campus**. Urban campus transportation systems face numerous challenges, including traffic congestion and road maintenance. The Sting-Sense project addresses these issues by implementing an IoT system on GT’s bus network. This system provides visibility into bus behavior across different times of the day, enabling data-driven decision making.
+This project was for a mobile computing and IoT class I took in Fall 2024, taught by Dr. Ashutosh Dhekne. <sup>1</sup> The goal was to build a dashboard that would allow anyone to identify Georgia Tech bus behavior across different times of the day. We were asked to collect this data by installing 2 devices on the bus – a GPS and an IMU. The GPS records the geographic coordinates of the bus on a second-by-second basis. As the bus runs its route, the IMU provides fine-grained motion data (the body’s specific force, angular rate, and orientation of the body).<sup>2</sup> This data, we realized, tells us a lot.
 
 <div style="text-align: center;">
-    <iframe src="https://kpath1999.github.io/gtbusmap" width="80%" height="600px" style="border:none;"></iframe>
-    <em><br>Fig. 1. <b>Dashboard MVP:</b> Sting-Sense visualization. You can see all the routes mapped out, with the various colors denoting the road conditions.</em>
+    <img src="/assets/mci/mci-bus-analytics.png" width="85%" />
+    <em><br>Fig. 1. <b>Data Processing and Analysis Workflow:</b> Using the Sensor Logger app and the hardware setup, we collect and preprocess the bus's raw raw data. Ride index and traffic congestion are computed afterwards. This feeds into the final map visualization.</em>
 </div>
 
-**Hardware setup: compact yet powerful**. The Sting-Sense system consists of a custom-built hardware package featuring a microcontroller, a GPS module, and an inertial measurement unit (IMU) sensor. These devices were installed on buses serving four major routes: gold, green, blue, and red. The gold route, in particular, is a vital link between Georgia Tech’s central campus, Tech Square, and the Midtown MARTA Station.<sup>1</sup>
+A common complaint among students at Tech is the ride quality around certain parts of campus.<sup>3</sup> The roads can be uneven, and passengers hold tight to the sides to avoid falling over. Sting-Sense made this problem more visible to the transportation department. By mapping all four routes using GPS and IMU data, we created a dashboard that tells you where the bus is bumpiest.
+
+Doing this is not as complicated as it seems. The only major task was installing the Sensor Logger app.<sup>4</sup> It records data from multiple sensors (more than we needed). I enabled the GPS option, in addition to the accelerometer, gravity, gyroscope, orientation, magnetometer and barometer sensors. Once I found myself on a bus ready for data collection, I stuck my phone to the wall using one of those hanging strips you find at Target.<sup>5</sup> This keeps the phone at a stationary angle while the bus bobs around. Several metrics were logged, but the ones most useful were the:
+
+* Local time of measurement (EST),
+* Latitude and longitude,
+* Accelerometer readings in three axes (x, y, z),
+* Travel speed, and
+* Orientation angles (roll, pitch, yaw).
+
+The last three variables helped with inferring the road condition. The simplest solution was to use the accelerometer reading. Since the phone was stuck upright against the wall, it was the y-axis acceleration that pointed upwards.<sup>6</sup> This would capture bumps as the bus dips into a pothole.
+
+The y-axis acceleration was passed through a low-pass filter. This _passes_ all signals below a predefined cutoff point and blocks anything above it.<sup>7</sup> It helps remove any high-frequency noise, providing a cleaner signal of the bus’s vertical movement. The standard deviation of the vertical acceleration was recorded. To sound official, we called it the SDVA (Standard Deviation of Vertical Acceleration). This quantifies the variability in vertical acceleration. Higher SDVA values means more variable vertical acceleration, suggesting rougher road conditions. The SDVA was then divided by speed. Doing this is crucial because higher speeds naturally lead to more vertical acceleration, even on smooth roads. By dividing SDVA by speed, you get a measure of road roughness that’s comparable across different vehicle speeds.<sup>8</sup>
+
+The quartiles (Q1, Q2, Q3) of the normalized SDVA dataset were computed. These quartiles were used to define 5 categories of road quality:
+
+* 5 (Excellent): normalized SDVA < Q1
+* 4 (Good): Q1 <= normalized SDVA < Q2
+* 3 (Fair): Q2 <= normalized SDVA < Q3
+* 2 (Poor): Q3 <= normalized SDVA < (Q3 + 1.5 * IQR)
+* 1 (Very Poor): normalized SDVA >= (Q3 + 1.5 * IQR), 
+
+where IQR is the Interquartile Range (Q3 – Q1).
+
+And that’s how the dashboard below came to be.
 
 <div style="text-align: center;">
-    <img src="/assets/mci/hardware-setup.png" width="70%" />
-    <em><br>Fig. 2. <b>Hardware Setup:</b> Compact and efficient, designed to fit seamlessly into the campus bus fleet.</em>
+    <iframe src="https://kpath1999.github.io/gtbusmap" width="90%" height="600px" style="border:none;"></iframe>
+    <em><br>Fig. 2. <b>Dashboard MVP:</b> Sting-Sense visualization. You can see all the routes mapped out, with the various colors denoting the road conditions.</em>
 </div>
 
-**Data collection: metrics that matter**. To analyze bus behavior and road quality, the Sting-Sense system collects data on three key metrics:
+This is what my professor said:
 
-1. Timing: Precise timestamps record the exact moment each data point is logged, enabling temporal analysis of traffic patterns.
-2. Location: GPS tracks the real-time movement of buses, providing insights into route efficiency and congestion hotspots.
-3. Movement: IMU sensors capture acceleration and orientation, crucial for detecting road anomalies and assessing driver performance.
+> “Looks beautiful, this is exactly what I wanted. But what about data from different times of the day? This would unlock more insights, especially traffic congestion along the gold route. It’s not viable to use your smartphone anymore for this since I need data across the day. Come up with another hardware solution.”
 
-The hardware setup took some time to build out, so we used the Sensor Logger app on an iPhone for the initial mapping of bus routes. It offers a range of sensors, including an accelerometer, gyroscope, GPS, barometer, and more. You can easily export all the data to a CSV for further processing.
+So that’s what we did. He supplied us with a microcontroller, GPS and IMU that we soldered onto a tripler - thank you to the staff at Hive Makerspace; without their guidance, setting up the hardware would have taken much longer.<sup>9</sup> After some Arduino coding, the device spit out the following data when turned on.
 
 <div style="text-align: center;">
-    <img src="/assets/mci/sensor-logger.png" width="20%" /> 
-    <em><br>Fig. 3. <b>Early Data Collection:</b> The Sensor Logger app provided a user-friendly interface for capturing multi-sensor data during the project's pilot phase.</em>
+    <img src="/assets/mci/sample-data.png" width="100%" />
 </div>
 
-**Traffic congestion analysis**. We use GPS data to understand traffic patterns. Speed data from the GPS is grouped into four congestion levels (quartiles). This method helps us discern traffic patterns across the day and in different parts of campus. The slowest speeds (1st quartile) indicate high congestion.
+2 setups were created and installed on the gold and green bus routes. We were able to collect 12 hours’ worth of data for each before the battery drained. The goal now was to infer the speed of the bus at each timestamp. Middle school math came in handy. We all know that speed equals distance over time. In the same vein, speed was calculated in the code block below:
 
 ```python
-def calculate_traffic_congestion(df):
-    speed_stats = df['speed'].describe()
+for i in range(1, len(df)):
+    if pd.notna(df.loc[i, 'lati']) and pd.notna(df.loc[i-1, 'lati']):
+        distance = haversine_distance(df.loc[i-1, 'lati'], df.loc[i-1, 'longti'], df.loc[i, 'lati'], df.loc[i, 'longti'])
+        time_diff = df.loc[i, 'time_seconds'] - df.loc[i-1, 'time_seconds']
+        if time_diff > 0:
+            df.loc[i, 'speed'] = distance / time_diff  # Speed in m/s
 
-    def calculate_congestion_level(row):
-        speed = row['speed']
-        if speed <= speed_stats['25%']:
-            return 5  # Heavy congestion
-        elif speed <= speed_stats['50%']:
-            return 4  # Moderate-heavy congestion
-        elif speed <= speed_stats['mean']:
-            return 3  # Moderate congestion
-        elif speed <= speed_stats['75%']:
-            return 2  # Light congestion
-        elif speed == -1.0:
-            return 0  # Unavailable data
-        else:
-            return 1  # No congestion
-
-    # Apply the function to each speed value
-    return df.apply(calculate_congestion_level, axis=1)
+df['speed'] = df['speed'].interpolate(method='linear')
 ```
 
-**Road quality assessment**. Vertical acceleration data is used to assess road quality. A measure is created called Standard Deviation of Vertical Acceleration (SDVA). SDVA is calculated by dividing the variation in vertical movement by the average speed. This helps detect bumps or issues in the road.
+The Harversine formula is specifically designed to calculate the distance between two GPS points.<sup>10</sup> Since the earth is spherical, this function calculates the angle between the two coordinates, using this angle to determine the distance along the Earth’s surface. Time difference is computed by converting time strings to seconds. The last two lines are where the distance over time calculation takes place, and any missing values are fixed by assuming a linear relationship between known values.
 
-\$$\ \text{SDVA} = \frac{\sigma(a_z)}{\bar{v}} $$ where $\sigma(a_z)$ is the standard deviation of vertical acceleration and $\bar{v}$ is the average speed over a segment. To focus on bumps and ignore small vibrations, the Butterworth low-pass filter is used. Thresholds are based on real-world data to classify road conditions into four categories.
+Now that we have speed data, we can use it to infer traffic congestion levels. Like how we did for road conditions, we defined 5 categories of traffic congestion:
 
-```python
-def calculate_road_condition(df, window_size=100):
-    
-    # Apply low-pass filter to vertical acceleration
-    sampling_rate = 1 / df['seconds_elapsed'].diff().mean()
-    cutoff_frequency = 2  # Hz
-    df['z_filtered'] = butter_lowpass_filter(df['z'], cutoff_frequency, sampling_rate, order=4)
+* 5 (Heavy congestion): speed <= Q1
+* 4 (Moderate-heavy congestion): Q1 < speed <= Q2
+* 3 (Moderate congestion): Q2 < speed <= mean
+* 2 (Light congestion): mean < speed <= Q3
+* 1 (No congestion): speed > Q3
 
-    # Calculate SDVA (Standard Deviation of Vertical Acceleration)
-    df['sdva'] = df['z_filtered'].rolling(window=window_size).std()
+Lower numbers mean less congestion (and higher speeds), while higher numbers mean more congestion (and lower speeds). This is how we think about traffic – when there’s heavy congestion, everything slows down to a crawl.
 
-    # Normalize SDVA by speed (to account for speed effects)
-    df['sdva_normalized'] = df['sdva'] / (df['speed'] + 1)  # Adding 1 to avoid division by zero
+One can gain a nuanced view of traffic conditions, not just identifying whether there is congestion, but how severe it is. However, it’s important to note that this method does not account for planned stops or traffic lights, which could be incorporated in further iterations.
 
-    # Define thresholds for road condition classification
-    conditions = [
-        (df['sdva_normalized'] < 0.05),
-        (df['sdva_normalized'] < 0.1),
-        (df['sdva_normalized'] < 0.15),
-        (df['sdva_normalized'] < 0.2),
-        (df['sdva_normalized'] >= 0.2)
-    ]
+The current version of this dashboard can be found <href="https://gtbusmap.streamlit.app/">here</href>. It allows you to analyze traffic patterns for each route using an hour-based filter. We're aware that the current version takes too long to load, compromising the user experience.
 
-    values = [5, 4, 3, 2, 1]
+**The road ahead**. Improving the dashboards would be the immediate next step. Incorporating historical data and external traffic information could further enhance the congestion analysis. Furthermore, if we were to link Sting-Sense with class schedules and event calendars, we could make the bus service respond better to campus needs.<sup>11</sup> The game-changer is when we upgrade the system with cellular network connectivity. Currently, we log bus data onto SD cards asynchronously, but with real-time data uploads to the cloud, we would make information readily available to the transportation department and the community at scale. We could make this system even more useful by using machine learning to predict when buses need maintenance. By conducting repairs before mechanical failures occur, the fleet always remains available.<sup>12</sup>
 
-    # Create road_condition column
-    df['road_condition'] = np.select(conditions, values)
-
-    return df
-```
-
-### Future Improvements
-
-To maximize the impact of Sting-Sense, we plan to upgrade the system with cellular network connectivity. This will allow for real-time data uploads to the cloud, making information instantly accessible for analysis and decision-making.
-
-Our big goal is to build a system that can work on its own. This means processing data as soon as it's collected and making decisions without human help. The implementation of predictive maintenance strategies in IoT systems in transportation brings several benefits.
-
-- It allows for a shift from reactive to proactive maintenance, minimizing unplanned downtime and disruptions in transportation services.
-- By addressing maintenance needs before failures occur, organizations can improve the reliability and availability of vehicles and infrastructure, enhancing passenger safety and customer satisfaction.
-
-**Conclusion**. This pilot project can be improved further by adding more bus routes and including other campus vehicles. We could make this system even more useful by using machine learning to predict when buses need maintenance and finding better routes for buses. If we link Sting-Sense with other campus information like class schedules and event calendars, we could make the bus service respond better to campus needs.<sup>2</sup>
-
-**What's next?** As we continue to improve Sting-Sense, Georgia Tech could set new standards for smart campus transportation and become a model for other schools and cities to follow. The project aligns with Georgia Tech's goal to have 100% clean transportation by 2030. By leveraging IoT technologies, we can optimize route planning, enhance passenger experiences, monitor vehicle health in real-time, improve safety, and enable demand-responsive transit services.<sup>3</sup>
+As we continue to improve Sting-Sense, Georgia Tech could set new standards for smart campus transportation and become a model for other schools and cities to follow. This project aligns with Tech’s goal of having 100% clean transportation by 2030. Leveraging IoT technologies, we can optimize route planning, monitor vehicle health in real-time, and enable demand-responsive transit services.<sup>13</sup>
